@@ -1,0 +1,65 @@
+:root{
+    --terminal-header:#333333;
+    --body-color:#11111199;
+    --text-color:white;
+    --minimize-button:#FFBD44;
+    --maximize-button: #00CA4E;
+    --close-button: #FF605C;
+}
+
+.terminal {
+    position: fixed;
+    top:60%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:50%;
+    padding:0;
+    border-radius:5px;
+    box-shadow: 0 0 9px 5px #00000077;
+    z-index: 10;
+}
+
+.terminal #terminal-header {
+    background:var(--terminal-header);
+    width: 100%;
+    height: 32px;
+    border-radius: 5px 5px 0 0;
+    cursor: move;
+}
+
+.terminal button{
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.terminal .close{
+    background:var(--close-button);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.terminal .minimize{
+    background:var(--minimize-button);
+    margin-right: 5px;
+}
+.terminal .maximize{
+    background:var(--maximize-button);
+}
+
+.terminal #terminal-body {
+    width: calc(100% - 6%);
+    height:50vh;
+    border:0;
+    margin:0;
+    padding:3%;
+    background:var(--body-color);
+    resize:none;
+    color:var(--text-color);
+    overflow-Y:scroll;
+}
+
+.terminal #terminal-footer {
+
+}
